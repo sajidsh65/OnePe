@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bank Partnership Proposal One Pe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #0A5C3F;
+    --green-mid: #0E7A55;
+    --green-pale: #EAF4EF;
+    --gold: #B8872A;
+    --gold-pale: #FDF5E6;
+    --cream: #F9F6F0;
+    --ink: #1C1C1C;
+    --ink-soft: #4B4B4B;
+    --ink-muted: #8B8B8B;
+    --white: #FFFFFF;
+    --border: #DED8CE;
+    --red-soft: #E8F0EA;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.65;
+    font-size: 15px;
+  }
+
+  /* ─── COVER ─── */
+  .cover {
+    min-height: 100vh;
+    background: var(--green);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 64px 72px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover-pattern {
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,0.025) 40px, rgba(255,255,255,0.025) 80px);
+  }
+
+  .cover-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.5px;
+  }
+
+  .cover-logo span { color: #F0C872; }
+
+  .cover-badge {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.7);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: 20px;
+  }
+
+  .cover-body {
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-eyebrow {
+    display: inline-block;
+    background: rgba(184,135,42,0.3);
+    color: #F0C872;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 7px 18px;
+    border-radius: 20px;
+    margin-bottom: 28px;
+  }
+
+  .cover h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 68px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.08;
+    max-width: 720px;
+    margin-bottom: 30px;
+  }
+
+  .cover h1 em { color: #F0C872; font-style: italic; }
+
+  .cover-sub {
+    color: rgba(255,255,255,0.65);
+    font-size: 16px;
+    max-width: 500px;
+    line-height: 1.7;
+  }
+
+  .cover-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-meta { color: rgba(255,255,255,0.45); font-size: 12px; line-height: 1.8; }
+  .cover-meta strong { color: rgba(255,255,255,0.7); }
+
+  .cover-circle {
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 80px solid rgba(184,135,42,0.12);
+    z-index: 0;
+  }
+
+  .cover-circle2 {
+    position: absolute;
+    right: 80px;
+    bottom: -120px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 50px solid rgba(255,255,255,0.05);
+    z-index: 0;
+  }
+
+  /* ─── PAGE ─── */
+  .page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 72px 72px;
+  }
+
+  /* ─── SECTION HEADER ─── */
+  .sec-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 36px;
+  }
+
+  .sec-num {
+    width: 40px; height: 40px;
+    background: var(--green);
+    color: white;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .sec-title-wrap {}
+
+  .sec-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    margin-bottom: 2px;
+  }
+
+  .sec-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.1;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 64px 0;
+  }
+
+  /* ─── WHAT BANK GETS ─── */
+  .value-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .value-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 30px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .value-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: var(--green);
+    border-radius: 2px;
+  }
+
+  .value-card.gold::before { background: var(--gold); }
+
+  .value-card .vc-icon { font-size: 30px; margin-bottom: 14px; display: block; }
+  .value-card h3 { font-weight: 600; font-size: 15px; margin-bottom: 8px; }
+  .value-card p { font-size: 13px; color: var(--ink-soft); line-height: 1.65; }
+  .value-card .vc-tag {
+    display: inline-block;
+    background: var(--green-pale);
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-top: 12px;
+  }
+  .value-card.gold .vc-tag { background: var(--gold-pale); color: var(--gold); }
+
+  /* ─── WHAT WE OFFER ─── */
+  .offer-box {
+    background: var(--green);
+    border-radius: 20px;
+    padding: 40px 44px;
+    color: white;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .offer-box::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; right: -60px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    border: 40px solid rgba(255,255,255,0.07);
+  }
+
+  .offer-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 12px;
+  }
+
+  .offer-box p { color: rgba(255,255,255,0.75); font-size: 14px; max-width: 560px; position: relative; z-index: 1; }
+
+  .offer-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .offer-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px;
+  }
+
+  .offer-item .oi-icon { font-size: 24px; margin-bottom: 10px; }
+  .offer-item h4 { font-weight: 600; font-size: 14px; margin-bottom: 6px; }
+  .offer-item p { font-size: 12px; color: var(--ink-soft); }
+
+  /* ─── PARTNERSHIP MODELS ─── */
+  .model-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+
+  .model-card {
+    border: 1.5px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .model-card.recommended { border-color: var(--green); border-width: 2px; }
+
+  .model-head {
+    padding: 20px 22px 16px;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .model-card.recommended .model-head { background: var(--green); }
+  .model-card.recommended .model-head * { color: white !important; }
+
+  .model-tag {
+    font-size: 10px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--ink-muted);
+    margin-bottom: 4px;
+  }
+
+  .model-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px; font-weight: 700;
+    color: var(--ink);
+  }
+
+  .model-body {
+    padding: 20px 22px;
+    background: var(--cream);
+  }
+
+  .model-body ul { list-style: none; }
+  .model-body ul li {
+    font-size: 13px;
+    color: var(--ink-soft);
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 8px;
+  }
+  .model-body ul li:last-child { border: none; }
+  .model-body ul li::before { content: '→'; color: var(--green); font-size: 12px; flex-shrink: 0; margin-top: 1px; }
+
+  .model-rec-tag {
+    display: block;
+    text-align: center;
+    background: var(--gold);
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px;
+  }
+
+  /* ─── REVENUE TABLE ─── */
+  .rev-table { width: 100%; border-collapse: collapse; }
+  .rev-table th {
+    background: var(--green);
+    color: white;
+    text-align: left;
+    padding: 14px 18px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .rev-table th:first-child { border-radius: 10px 0 0 0; }
+  .rev-table th:last-child { border-radius: 0 10px 0 0; }
+  .rev-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+  .rev-table tr:last-child td { border: none; }
+  .rev-table tr:nth-child(even) td { background: var(--cream); }
+  .rev-table td:first-child { font-weight: 600; color: var(--ink); }
+  .rev-table td .bank-share { color: var(--green); font-weight: 700; }
+  .rev-table td .our-share { color: var(--gold); font-weight: 700; }
+  .rev-table-wrap {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  /* ─── MARKET STATS ─── */
+  .stats-strip {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: hidden;
+    margin-bottom: 36px;
+  }
+
+  .stat-item {
+    padding: 28px 24px;
+    border-right: 1px solid var(--border);
+    text-align: center;
+  }
+  .stat-item:last-child { border: none; }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--green);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-label { font-size: 12px; color: var(--ink-muted); line-height: 1.4; }
+
+  /* ─── RISK MITIGATION ─── */
+  .risk-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .risk-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px 24px;
+  }
+
+  .risk-card .risk-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--ink-muted);
+    margin-bottom: 6px;
+  }
+
+  .risk-card h4 { font-weight: 600; font-size: 14px; margin-bottom: 6px; color: var(--ink); }
+  .risk-card p { font-size: 13px; color: var(--ink-soft); }
+
+  /* ─── ROADMAP ─── */
+  .roadmap { display: flex; flex-direction: column; gap: 0; }
+
+  .rm-step {
+    display: flex;
+    gap: 24px;
+    position: relative;
+  }
+
+  .rm-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 48px;
+    flex-shrink: 0;
+  }
+
+  .rm-dot {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--green);
+    color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .rm-line {
+    width: 2px;
+    flex: 1;
+    background: var(--border);
+    margin: 6px 0;
+    min-height: 32px;
+  }
+
+  .rm-content {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 16px;
+    flex: 1;
+  }
+
+  .rm-content .rm-phase {
+    font-size: 10px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--green);
+    margin-bottom: 4px;
+  }
+
+  .rm-content h4 { font-weight: 600; font-size: 15px; margin-bottom: 6px; }
+  .rm-content p { font-size: 13px; color: var(--ink-soft); }
+
+  /* ─── CALL TO ACTION ─── */
+  .cta-box {
+    background: linear-gradient(135deg, var(--green) 0%, #0A4A30 100%);
+    border-radius: 20px;
+    padding: 52px 56px;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-box::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    border: 60px solid rgba(184,135,42,0.15);
+  }
+
+  .cta-box h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 44px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-box h2 em { color: #F0C872; font-style: italic; }
+
+  .cta-box p {
+    color: rgba(255,255,255,0.7);
+    font-size: 15px;
+    max-width: 480px;
+    margin: 0 auto 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-pills {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-pill {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .cta-pill.primary {
+    background: var(--gold);
+    border-color: var(--gold);
+    font-weight: 600;
+  }
+
+  /* ─── NOTE BOX ─── */
+  .note {
+    background: var(--gold-pale);
+    border: 1px solid #E8D4A0;
+    border-left: 4px solid var(--gold);
+    border-radius: 10px;
+    padding: 18px 22px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 24px;
+  }
+
+  .note strong { color: var(--gold); }
+
+  /* ─── FOOTER ─── */
+  .doc-footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.4);
+    padding: 28px 72px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+  }
+
+  .doc-footer strong { color: rgba(255,255,255,0.65); }
+
+  @media (max-width: 800px) {
+    .cover { padding: 40px 28px; }
+    .cover h1 { font-size: 40px; }
+    .page { padding: 48px 28px; }
+    .value-grid, .offer-items, .model-grid, .risk-grid { grid-template-columns: 1fr; }
+    .stats-strip { grid-template-columns: 1fr 1fr; }
+    .doc-footer { flex-direction: column; gap: 8px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══ COVER ══ -->
+<div class="cover">
+  <div class="cover-pattern"></div>
+  <div class="cover-circle"></div>
+  <div class="cover-circle2"></div>
+
+  <div class="cover-top">
+    <div class="cover-logo">One<span>Pe</span></div>
+    <div class="cover-badge">Confidential · Pre-Incubation Draft</div>
+  </div>
+
+  <div class="cover-body">
+    <div class="cover-eyebrow">Bank Partnership Proposal</div>
+    <h1>Let's bring Pakistan's<br>merchants into the<br><em>digital economy.</em></h1>
+    <p class="cover-sub">A strategic partnership offer for Islamic and conventional banks seeking to acquire merchant customers, grow SME financing, and expand RAAST P2M adoption with zero operational overhead.</p>
+  </div>
+
+  <div class="cover-footer">
+    <div class="cover-meta">
+      <strong>One Pe (Working Title)</strong><br>
+      Pre-Incubation · EvolveX Session 4 · NIC Hyderabad<br>
+      February 2026P2M
+    </div>
+    <div class="cover-meta" style="text-align:right;">
+      Prepared for:<br>
+      <strong>Senior Management / Innovation Teams</strong><br>
+      Islamic & Conventional Banks, Pakistan
+    </div>
+  </div>
+</div>
+
+<!-- ══ SECTION 1: MARKET OPPORTUNITY ══ -->
+<div class="page">
+  <div class="sec-header">
+    <div class="sec-num">1</div>
+    <div class="sec-title-wrap">
+      <div class="sec-label">Why Now</div>
+      <div class="sec-title">The Opportunity</div>
+    </div>
+  </div>
+
+  <div class="stats-strip">
+    <div class="stat-item">
+      <div class="stat-num">85%</div>
+      <div class="stat-label">of Pakistan's retail transactions still done in cash</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">5.2M+</div>
+      <div class="stat-label">small merchants with no digital payment infrastructure</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">38%</div>
+      <div class="stat-label">growth in digital payments in FY2024-25 (SBP data)</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">96%</div>
+      <div class="stat-label">of Muslims in Pakistan prefer Shariah compliant finance</div>
+    </div>
+  </div>
+
+  <p style="color: var(--ink-soft); font-size: 14px; line-height: 1.8;">
+    Pakistan's SBP has set an ambitious national target: double digital transactions to 15 billion annually and digitize merchant payments through RAAST P2M. QR enabled merchants grew 111% in 2024, yet over 5 million merchants, kiryana stores, service providers, artisans still operate entirely in cash. They are invisible to the formal financial system. No credit history. No financing. No path to growth.
+    <br><br>
+    This is the gap we are building to close and we need a licensed banking partner to do it.
+  </p>
+
+  <hr class="divider">
+
+  <!-- ══ SECTION 2: WHAT WE DO ══ -->
+  <div class="sec-header">
+    <div class="sec-num">2</div>
+    <div class="sec-title-wrap">
+      <div class="sec-label">The Product</div>
+      <div class="sec-title">What One Pe Does</div>
+    </div>
+  </div>
+
+  <div class="offer-box">
+    <h3>A merchant payments + Islamic financing platform for Pakistan's informal economy</h3>
+    <p>We onboard small merchants with a QR code (no hardware, no fees) so they can accept digital payments instantly. Every transaction builds a financial identity. That data powers Shariah compliant financing offers, automatically, without paperwork.</p>
+  </div>
+
+  <div class="offer-items">
+    <div class="offer-item">
+      <div class="oi-icon">📱</div>
+      <h4>QR-Based Payment Acceptance</h4>
+      <p>Merchants accept payments from any RAAST/bank wallet via a single QR. No MDR charges to merchants.</p>
+    </div>
+    <div class="offer-item">
+      <div class="oi-icon">📊</div>
+      <h4>Sales Analytics Dashboard</h4>
+      <p>Merchants see their daily sales, trends, and customer patterns in local languages Options building financial literacy alongside digital habits.</p>
+    </div>
+    <div class="offer-item">
+      <div class="oi-icon">☪️</div>
+      <h4>Islamic Financing (Murabaha)</h4>
+      <p>Based on average monthly sales, we generate financing offers structured as Murabaha or Ijarah. No riba. No collateral required.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Key Insight from BharatPe:</strong> In India, BharatPe reached 18M+ merchants by making payment acceptance free, then monetizing through merchant lending. Their loan repayment rate exceeded 96% because repayments are auto-deducted from daily QR settlements. We are replicating this model adapted for Pakistan's Islamic finance context and RAAST infrastructure.
+  </div>
+
+  <hr class="divider">
+
+  <!-- ══ SECTION 3: WHAT THE BANK GETS ══ -->
+  <div class="sec-header">
+    <div class="sec-num">3</div>
+    <div class="sec-title-wrap">
+      <div class="sec-label">Value Proposition</div>
+      <div class="sec-title">What the Bank Gains</div>
+    </div>
+  </div>
+
+  <div class="value-grid">
+    <div class="value-card">
+      <span class="vc-icon">🏦</span>
+      <h3>New Merchant Account Acquisition at Zero CAC</h3>
+      <p>We onboard merchants on the ground. Every merchant we sign up requires a linked bank account creating net new customers for your branch network with no acquisition cost on your end.</p>
+      <div class="vc-tag">New customers</div>
+    </div>
+    <div class="value-card gold">
+      <span class="vc-icon">📈</span>
+      <h3>SME Financing Portfolio Growth</h3>
+      <p>Our transaction data gives the bank a real-time, verified view of each merchant's cash flow replacing paperworbased credit assessment with live AI-driven underwriting. Expand your SME book without expanding your branch costs.</p>
+      <div class="vc-tag">Revenue growth</div>
+    </div>
+    <div class="value-card">
+      <span class="vc-icon">⚡</span>
+      <h3>RAAST P2M Adoption at Scale</h3>
+      <p>SBP has mandated wider RAAST P2M adoption by banks. We bring merchants onto RAAST directly helping the bank meet SBP targets without building your own merchant acquisition team.</p>
+      <div class="vc-tag">Regulatory compliance</div>
+    </div>
+    <div class="value-card gold">
+      <span class="vc-icon">☪️</span>
+      <h3>Islamic Banking Market Share</h3>
+      <p>For Islamic banks specifically: we are the only merchant platform offering Shariah compliant financing as a core product, not an add-on. This is an untapped segment with deep faith-based loyalty.</p>
+      <div class="vc-tag">Competitive edge</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ══ SECTION 4: PARTNERSHIP MODELS ══ -->
+  <div class="sec-header">
+    <div class="sec-num">4</div>
+    <div class="sec-title-wrap">
+      <div class="sec-label">How We Work Together</div>
+      <div class="sec-title">Three Partnership Structures</div>
+    </div>
+  </div>
+
+  <div class="model-grid">
+    <div class="model-card">
+      <div class="model-head">
+        <div class="model-tag">Option A</div>
+        <div class="model-name">Payment Rails Partner</div>
+      </div>
+      <div class="model-body">
+        <ul>
+          <li>Bank provides RAAST/payment API access</li>
+          <li>We handle merchant onboarding & app</li>
+          <li>Bank receives settlement float & MDR from business accounts</li>
+          <li>Minimal bank involvement in operations</li>
+          <li>Best for: Banks wanting low-effort RAAST expansion</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="model-card recommended">
+      <div class="model-rec-tag">⭐ Recommended</div>
+      <div class="model-head">
+        <div class="model-tag">Option B</div>
+        <div class="model-name">Lending Partner</div>
+      </div>
+      <div class="model-body">
+        <ul>
+          <li>Bank provides payment rails + Islamic financing capital</li>
+          <li>We provide merchant data, underwriting model & app</li>
+          <li>Bank owns the financing product (Murabaha / Ijarah)</li>
+          <li>Revenue split on financing margin</li>
+          <li>Auto-deduction repayment via QR settlements</li>
+          <li>Best for: Islamic banks, Meezan, BankIslami, Al Baraka</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="model-card">
+      <div class="model-head">
+        <div class="model-tag">Option C</div>
+        <div class="model-name">White-Label Partner</div>
+      </div>
+      <div class="model-body">
+        <ul>
+          <li>Bank white-labels our platform under their brand</li>
+          <li>We build & operate the technology</li>
+          <li>Bank controls the merchant relationship</li>
+          <li>Technology fee + revenue share model</li>
+          <li>Best for: Banks wanting full brand ownership of merchant segment</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ══ SECTION 5: REVENUE SHARING ══ -->
+  <div class="sec-header">
+    <div class="sec-num">5</div>
+    <div class="sec-title-wrap">
+      <div class="sec-label">Economics</div>
+      <div class="sec-title">Revenue Sharing Model</div>
+    </div>
+  </div>
+
+  <div class="rev-table-wrap">
+    <table class="rev-table">
+      <thead>
+        <tr>
+          <th>Revenue Stream</th>
+          <th>Source</th>
+          <th>Bank Share</th>
+          <th>One Pe Share</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Islamic Financing Margin (Murabaha)</td>
+          <td>Merchant loan repayments</td>
+          <td><span class="bank-share">60–70%</span></td>
+          <td><span class="our-share">30–40%</span></td>
+        </tr>
+        <tr>
+          <td>MDR on Business Account Transactions</td>
+          <td>Inter-bank settlement fees</td>
+          <td><span class="bank-share">80%</span></td>
+          <td><span class="our-share">20%</span></td>
+        </tr>
+        <tr>
+          <td>Account Float / Deposit Benefit</td>
+          <td>Merchant settlement balances</td>
+          <td><span class="bank-share">100%</span></td>
+          <td><span class="our-share">—</span></td>
+        </tr>
+        <tr>
+          <td>Premium Merchant Services (future)</td>
+          <td>Analytics, insurance, payroll</td>
+          <td><span class="bank-share">40%</span></td>
+          <td><span class="our-share">60%</span></td>
+        </tr>
+        <tr>
+          <td>Cross-sell / Up-sell Products</td>
+          <td>Referral to bank products</td>
+          <td><span class="bank-share">100%</span></td>
+          <td><span class="our-share">Referral fee</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    <strong>Note:</strong> Merchant-facing payment acceptance is free (zero MDR to merchants) matching the BharatPe model. Revenue is generated on the back-end through financing margins and banking float, not by charging the merchant for transactions. This is the key to rapid merchant adoption.
+  </div>
+
+  <hr class="divider">
+
+  <!-- ══ SECTION 6: RISK MITIGATION ══ -->
+  <div class="sec-header">
+    <div class="sec-num">6</div>
+    <div class="sec-title-wrap">
+      <div class="sec-label">De-Risking the Partnership</div>
+      <div class="sec-title">How We Protect the Bank</div>
+    </div>
+  </div>
+
+  <div class="risk-grid">
+    <div class="risk-card">
+      <div class="risk-label">Credit Risk</div>
+      <h4>AI-Driven Underwriting on Real Sales Data</h4>
+      <p>Financing eligibility is based entirely on verified transaction history on our platform not credit scores or paperwork. We only offer financing after a merchant has 90+ days of consistent sales data.</p>
+    </div>
+    <div class="risk-card">
+      <div class="risk-label">Repayment Risk</div>
+      <h4>Auto-Deduction from Daily Settlements</h4>
+      <p>Inspired by BharatPe's 96% repayment rate: loan repayments are automatically deducted from daily QR settlement amounts before funds hit the merchant's account. No chasing required.</p>
+    </div>
+    <div class="risk-card">
+      <div class="risk-label">Regulatory Risk</div>
+      <h4>SBP-Aligned from Day One</h4>
+      <p>We operate within RAAST P2M framework and SBP's EMI/fintech guidelines. All Islamic financing products structured with a certified Shariah board. Full KYC/AML compliance via NADRA integration.</p>
+    </div>
+    <div class="risk-card">
+      <div class="risk-label">Operational Risk</div>
+      <h4>We Own the Merchant Relationship</h4>
+      <p>The bank has zero operational overhead with merchants. We handle onboarding, support, app maintenance, and merchant education. The bank provides the license and capital rails we do the rest.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ══ SECTION 7: ROADMAP ══ -->
+  <div class="sec-header">
+    <div class="sec-num">7</div>
+    <div class="sec-title-wrap">
+      <div class="sec-label">Execution Plan</div>
+      <div class="sec-title">Partnership Roadmap</div>
+    </div>
+  </div>
+
+  <div class="roadmap">
+    <div class="rm-step">
+      <div class="rm-left">
+        <div class="rm-dot">1</div>
+        <div class="rm-line"></div>
+      </div>
+      <div class="rm-content">
+        <div class="rm-phase">Month 1–2 · Agreement</div>
+        <h4>Sign MOU & Define Partnership Structure</h4>
+        <p>Agree on partnership model (A, B, or C), revenue split, API access scope, and Shariah board requirements. Legal and compliance review on both sides.</p>
+      </div>
+    </div>
+    <div class="rm-step">
+      <div class="rm-left">
+        <div class="rm-dot">2</div>
+        <div class="rm-line"></div>
+      </div>
+      <div class="rm-content">
+        <div class="rm-phase">Month 2–4 · Build</div>
+        <h4>API Integration & Pilot App Development</h4>
+        <p>Integrate with bank's payment API and RAAST P2M. Build merchant facing app. Set up automated KYC via NADRA. Develop Islamic financing product structure with Shariah board.</p>
+      </div>
+    </div>
+    <div class="rm-step">
+      <div class="rm-left">
+        <div class="rm-dot">3</div>
+        <div class="rm-line"></div>
+      </div>
+      <div class="rm-content">
+        <div class="rm-phase">Month 4–6 · Pilot</div>
+        <h4>500-Merchant Pilot in Vehari</h4>
+        <p>Launch with 500 merchants in Vehari across kiryana stores, service providers, and small traders. Measure activation, transaction volume, and retention. Refine underwriting model with real data.</p>
+      </div>
+    </div>
+    <div class="rm-step">
+      <div class="rm-left">
+        <div class="rm-dot">4</div>
+        <div class="rm-line"></div>
+      </div>
+      <div class="rm-content">
+        <div class="rm-phase">Month 6–12 · Scale</div>
+        <h4>Expand to Sindh & Punjab (10,000 Merchants)</h4>
+        <p>Based on pilot results, scale merchant acquisition city by city. Introduce Islamic financing offers to eligible merchants (90+ day transaction history). Begin generating lending revenue for both parties.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ══ SECTION 8: WHY US ══ -->
+  <div class="sec-header">
+    <div class="sec-num">8</div>
+    <div class="sec-title-wrap">
+      <div class="sec-label">Founding Team Context</div>
+      <div class="sec-title">Why One Pe</div>
+    </div>
+  </div>
+
+  <div style="background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 32px 36px; margin-bottom: 20px;">
+    <p style="font-size: 14px; color: var(--ink-soft); line-height: 1.9; margin-bottom: 20px;">
+      We are a pre-incubation startup accepted into <strong>EvolveX Session 4 at NIC Hyderabad</strong> one of Pakistan's leading national incubation programs backed by the Ministry of IT. Our idea is inspired by BharatPe's proven merchant first model, adapted for Pakistan's regulatory landscape and the Muslim merchant's financial needs.
+    </p>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
+      <div style="text-align:center; padding: 16px; background: var(--green-pale); border-radius: 12px;">
+        <div style="font-size: 22px; margin-bottom: 6px;">🎓</div>
+        <div style="font-size: 12px; font-weight: 600; color: var(--green);">NIC Hyderabad</div>
+        <div style="font-size: 11px; color: var(--ink-muted);">EvolveX Program</div>
+      </div>
+      <div style="text-align:center; padding: 16px; background: var(--green-pale); border-radius: 12px;">
+        <div style="font-size: 22px; margin-bottom: 6px;">🌍</div>
+        <div style="font-size: 12px; font-weight: 600; color: var(--green);">Proven Model</div>
+        <div style="font-size: 11px; color: var(--ink-muted);">BharatPe: $2.85B valuation</div>
+      </div>
+      <div style="text-align:center; padding: 16px; background: var(--green-pale); border-radius: 12px;">
+        <div style="font-size: 22px; margin-bottom: 6px;">☪️</div>
+        <div style="font-size: 12px; font-weight: 600; color: var(--green);">First Mover</div>
+        <div style="font-size: 11px; color: var(--ink-muted);">Islamic first merchant fintech in PK</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ CTA ══ -->
+  <div class="cta-box">
+    <h2>Let's build this <em>together.</em></h2>
+    <p>We are actively seeking our founding bank partner an institution that sees Pakistan's informal merchant economy not as a risk, but as an opportunity.</p>
+    <div class="cta-pills">
+      <div class="cta-pill primary">Request a Meeting</div>
+      <div class="cta-pill">Review Full Financials</div>
+      <div class="cta-pill">Explore API Integration</div>
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+<div class="doc-footer">
+  <div><strong>One Pe</strong> · Bank Partnership Proposal · Confidential · Pre-Incubation Draft · Feb 2026</div>
+  <div>EvolveX Session 4 · NIC Hyderabad</div>
+</div>
+
+</body>
+</html>
